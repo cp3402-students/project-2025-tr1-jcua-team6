@@ -32,4 +32,4 @@ jobs:
           rsync -avz --delete \
             -e "ssh -o StrictHostKeyChecking=no" \
             wp-content/ \
-            $SSH_USER@$DROPLET_IP:$WP_CONTENT_PATH
+            root@209.38.89.77:$WP_CONTENT_PATH
