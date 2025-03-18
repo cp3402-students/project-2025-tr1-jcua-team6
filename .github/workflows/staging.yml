@@ -1,0 +1,33 @@
+name: staging actions
+
+on:
+  push:
+    branches:
+      - staging
+    paths:
+      - 'wp-content/**'
+
+jobs:
+  deploy:
+    runs-on:
+      ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure SSH key
+        uses: webfactory/ssh-agent@v0.8.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy wp-content
+        run: |
+          DROPLET_IP=${{ secrets.DROPLET_IP }}
+          SSH_USER=${{ secrets.SSH_USER }}
+          WP_CONTENT_PATH=${{ secrets.WP_CONTENT_PATH }}
+
+          rsync -avz --delete \
+            -e "ssh -o StrictHostKeyChecking=no" \
+            wp-content/ \
+            $SSH_USER@$DROPLET_IP:$WP_CONTENT_PATH
