@@ -27,10 +27,9 @@ jobs:
           SSH_USER=${{ secrets.SSH_USER }}
           TEST_PATH="/tmp/testdir"
 
-          ssh -o StrictHostKeyChecking=no $STAGING_SSH_USER@$STAGING_DROPLET_IP "mkdir -p $TEST_PATH"
-
-          # Use /tmp for testing rsync
+          ssh -o StrictHostKeyChecking=no $SSH_USER@$DROPLET_IP "mkdir -p $TEST_PATH"
+      
           rsync -avz --delete \
             -e "ssh -o StrictHostKeyChecking=no" \
             wp-content/ \
-            $STAGING_SSH_USER@$STAGING_DROPLET_IP:$TEST_PATH
+            $SSH_USER@$DROPLET_IP:$TEST_PATH
