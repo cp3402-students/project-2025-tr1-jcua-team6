@@ -33,8 +33,3 @@ jobs:
             -e "ssh -o StrictHostKeyChecking=no" \
             wp-content/ \
             $SSH_USER@$DROPLET_IP:$WP_CONTENT_PATH
-      - name: Debug variables
-        run: |
-          echo "DEBUG: DROPLET_IP: ${{ secrets.DROPLET_IP }}"
-          echo "DEBUG: SSH_USER: ${{ secrets.SSH_USER }}"
-          echo "DEBUG: WP_CONTENT_PATH: ${{ secrets.WP_CONTENT_PATH }}"
