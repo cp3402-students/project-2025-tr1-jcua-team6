@@ -27,9 +27,11 @@ jobs:
           SSH_USER=${{ secrets.SSH_USER }}
           WP_CONTENT_PATH=${{ secrets.WP_CONTENT_PATH }}
 
-          ssh -o StrictHostKeyChecking=no $SSH_USER@$DROPLET_IP "mkdir -p /var/www/html/wp-content"
+          ssh -o StrictHostKeyChecking=no $SSH_USER@$DROPLET_IP "mkdir -p /tmp/testdir"
+
+          ssh -o StrictHostKeyChecking=no $SSH_USER@$DROPLET_IP "mkdir -p $WP_CONTENT_PATH"
 
           rsync -avz --delete \
             -e "ssh -o StrictHostKeyChecking=no" \
             wp-content/ \
-            $SSH_USER@$DROPLET_IP:/var/www/html/wp-content
+            $SSH_USER@$DROPLET_IP:$WP_CONTENT_PATH
