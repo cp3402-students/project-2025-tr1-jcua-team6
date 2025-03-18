@@ -27,6 +27,8 @@ jobs:
           SSH_USER=${{ secrets.SSH_USER }}
           WP_CONTENT_PATH=${{ secrets.WP_CONTENT_PATH }}
 
+          ssh -o StrictHostKeyChecking=no $SSH_USER@$DROPLET_IP "mkdir -p $REMOTE_WP_CONTENT_PATH"
+
           rsync -avz --delete \
             -e "ssh -o StrictHostKeyChecking=no" \
             wp-content/ \
