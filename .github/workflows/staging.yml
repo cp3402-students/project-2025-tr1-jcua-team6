@@ -16,20 +16,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Configure SSH key
-        uses: webfactory/ssh-agent@v0.8.0
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-      - name: Deploy wp-content
+      - name: Write private key to file and Deploy wp-content
         run: |
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key.pem
+          chmod 600 private_key.pem
           DROPLET_IP=${{ secrets.DROPLET_IP }}
           SSH_USER=${{ secrets.SSH_USER }}
           WP_CONTENT_PATH=${{ secrets.WP_CONTENT_PATH }}
-
-          ssh -o StrictHostKeyChecking=no $SSH_USER@$DROPLET_IP "mkdir -p $WP_CONTENT_PATH"
-
+          ssh -i private_key.pem -o StrictHostKeyChecking=no $SSH_USER@$DROPLET_IP "mkdir -p $WP_CONTENT_PATH"
           rsync -avz --delete \
-            -e "ssh -o StrictHostKeyChecking=no" \
+            -e "ssh -i private_key.pem -o StrictHostKeyChecking=no" \
             wp-content/ \
             $SSH_USER@$DROPLET_IP:$WP_CONTENT_PATH
+          rm private_key.pem # Remove the private key file after use
