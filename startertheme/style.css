@@ -648,8 +648,9 @@ textarea {
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
-	display: block;
 	width: 100%;
+	display: flex;
+    justify-content: center;
 }
 
 .main-navigation ul {
@@ -690,11 +691,19 @@ textarea {
 
 .main-navigation li {
 	position: relative;
+	padding: 5px;
+	margin: 0 10px;
 }
 
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+}
+
+.main-navigation li.current_page_item {
+	background-color: hsl(124, 54%, 46%, 0.5);
+	border-radius: 5px;
+	padding: 5px;
 }
 
 /* Small menu. */
@@ -745,6 +754,8 @@ textarea {
 --------------------------------------------- */
 .sticky {
 	display: block;
+	background-color: white;
+    padding: 5px;
 }
 
 .post,
@@ -801,6 +812,8 @@ textarea {
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
 	display: inline-block;
+	display: flex;
+    justify-content: center;
 }
 
 /* Captions
@@ -966,4 +979,9 @@ textarea {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 1.5em;
+}
+
+.sticky {
+	position: sticky;
+	top: 0;
 }
