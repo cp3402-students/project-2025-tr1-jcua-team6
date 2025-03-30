@@ -985,3 +985,8 @@ textarea {
 	position: sticky;
 	top: 0;
 }
+
+.site-footer {
+	background-color: hsl(124, 54%, 46%, 0.5);
+	padding: 5px;
+}
