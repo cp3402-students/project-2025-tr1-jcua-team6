@@ -981,6 +981,50 @@ textarea {
 	margin-bottom: 1.5em;
 }
 
+/* 
+GROUP MEMBER CODE
+Casey's style section (TEMPORARY) - needs refactoring later 
+*/
+
+/* 1. The “Bubble” Container */
+.feature-bubble {
+	background-color: #f7f7ff;  /* Light background color */
+	border-radius: 20px;        /* Curved corners */
+	padding: 2rem;              /* Internal spacing */
+	margin-bottom: 2rem;        /* Spacing below the container */
+	box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+ }
+  
+  /* 2. Section Heading */
+  .feature-heading {
+	font-size: 2rem;
+	font-weight: 700;
+	margin-bottom: 1.5rem;
+	color: #333; /* Dark text color */
+ }
+  
+  /* 3. Row Layout */
+  .feature-row {
+	display: flex;              /* Flex layout for side-by-side items */
+	align-items: center;        /* Vertically center items */
+	justify-content: space-between; /* Distribute space between columns */
+	flex-wrap: wrap;            /* Wrap columns on smaller screens */
+	gap: 1rem;                  /* Space between items */
+ }
+  
+  /* 4. Text Group */
+  .feature-text {
+	flex: 1 1 auto;             /* Allow text to expand or shrink as needed */
+	margin-right: 1rem;         /* Space to the right (before image) */
+ }
+  
+  /* 5. Image Styling */
+  .feature-image img {
+	max-width: 100%;            /* Responsive image sizing */
+	border-radius: 10px;        /* Slightly rounded image corners */
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle image shadow */
+ }
+  
 .sticky {
 	position: sticky;
 	top: 0;
