@@ -533,7 +533,7 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: purple;
+	color: black;
 }
 
 a:visited {
@@ -648,8 +648,9 @@ textarea {
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
-	display: block;
 	width: 100%;
+	display: flex;
+    justify-content: center;
 }
 
 .main-navigation ul {
@@ -690,11 +691,19 @@ textarea {
 
 .main-navigation li {
 	position: relative;
+	padding: 5px;
+	margin: 0 10px;
 }
 
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+}
+
+.main-navigation li.current_page_item {
+	background-color: hsl(124, 54%, 46%, 0.5);
+	border-radius: 5px;
+	padding: 5px;
 }
 
 /* Small menu. */
@@ -745,6 +754,8 @@ textarea {
 --------------------------------------------- */
 .sticky {
 	display: block;
+	background-color: white;
+    padding: 5px;
 }
 
 .post,
@@ -801,6 +812,8 @@ textarea {
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
 	display: inline-block;
+	display: flex;
+    justify-content: center;
 }
 
 /* Captions
@@ -980,7 +993,7 @@ Casey's style section (TEMPORARY) - needs refactoring later
 	padding: 2rem;              /* Internal spacing */
 	margin-bottom: 2rem;        /* Spacing below the container */
 	box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-  }
+ }
   
   /* 2. Section Heading */
   .feature-heading {
@@ -988,7 +1001,7 @@ Casey's style section (TEMPORARY) - needs refactoring later
 	font-weight: 700;
 	margin-bottom: 1.5rem;
 	color: #333; /* Dark text color */
-  }
+ }
   
   /* 3. Row Layout */
   .feature-row {
@@ -997,18 +1010,27 @@ Casey's style section (TEMPORARY) - needs refactoring later
 	justify-content: space-between; /* Distribute space between columns */
 	flex-wrap: wrap;            /* Wrap columns on smaller screens */
 	gap: 1rem;                  /* Space between items */
-  }
+ }
   
   /* 4. Text Group */
   .feature-text {
 	flex: 1 1 auto;             /* Allow text to expand or shrink as needed */
 	margin-right: 1rem;         /* Space to the right (before image) */
-  }
+ }
   
   /* 5. Image Styling */
   .feature-image img {
 	max-width: 100%;            /* Responsive image sizing */
 	border-radius: 10px;        /* Slightly rounded image corners */
 	box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle image shadow */
-  }
+ }
   
+.sticky {
+	position: sticky;
+	top: 0;
+}
+
+.site-footer {
+	background-color: hsl(124, 54%, 46%, 0.5);
+	padding: 5px;
+}
