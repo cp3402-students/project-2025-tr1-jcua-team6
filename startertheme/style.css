@@ -755,7 +755,12 @@ textarea {
 .sticky {
 	display: block;
 	background-color: white;
-    padding: 5px;
+  padding: 5px;
+}
+
+.site-footer {
+	background-color: hsl(124, 54%, 46%, 0.5);
+	padding: 5px;
 }
 
 .post,
@@ -771,6 +776,14 @@ textarea {
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
+}
+
+.entry-title {
+    text-align: center;
+    background-color: #1a67a3;
+    background: linear-gradient(135deg, #1fa889, #1a67a3);
+    margin-bottom: 0px;
+    padding: 5px;
 }
 
 .page-links {
@@ -986,51 +999,101 @@ GROUP MEMBER CODE
 Casey's style section (TEMPORARY) - needs refactoring later 
 */
 
-/* 1. The “Bubble” Container */
 .feature-bubble {
-	background-color: #f7f7ff;  /* Light background color */
-	border-radius: 20px;        /* Curved corners */
-	padding: 2rem;              /* Internal spacing */
-	margin-bottom: 2rem;        /* Spacing below the container */
-	box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
- }
+    background-color: #9ad99e;
+    align-content: center;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: inset 1px -7px 20px 5px rgb(0 0 0 / 10%);
+}
   
-  /* 2. Section Heading */
-  .feature-heading {
+.feature-heading {
 	font-size: 2rem;
 	font-weight: 700;
 	margin-bottom: 1.5rem;
-	color: #333; /* Dark text color */
- }
+	color: #333;
+}
   
-  /* 3. Row Layout */
-  .feature-row {
-	display: flex;              /* Flex layout for side-by-side items */
-	align-items: center;        /* Vertically center items */
+.feature-row {
+	display: flex;                  /* Flex layout for side-by-side items */
+	align-items: center;            /* Vertically center items */
 	justify-content: space-between; /* Distribute space between columns */
-	flex-wrap: wrap;            /* Wrap columns on smaller screens */
-	gap: 1rem;                  /* Space between items */
- }
+	flex-wrap: wrap;                /* Wrap columns on smaller screens */
+	gap: 1rem;                 	    /* Space between items */
+}
   
-  /* 4. Text Group */
-  .feature-text {
-	flex: 1 1 auto;             /* Allow text to expand or shrink as needed */
-	margin-right: 1rem;         /* Space to the right (before image) */
- }
+.feature-text { 
+	flex: 1 1 auto;                 /* Allow text to expand or shrink as needed */
+	margin-right: 1rem;             /* Space to the right (before image) */
+}
   
-  /* 5. Image Styling */
-  .feature-image img {
-	max-width: 100%;            /* Responsive image sizing */
-	border-radius: 10px;        /* Slightly rounded image corners */
+.feature-image img { 
+	max-width: 100%;                /* Responsive image sizing */
+	border-radius: 10px;            /* Slightly rounded image corners */
 	box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle image shadow */
- }
-  
-.sticky {
-	position: sticky;
-	top: 0;
 }
 
-.site-footer {
-	background-color: hsl(124, 54%, 46%, 0.5);
-	padding: 5px;
+.feature-description {
+    height: 160px;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature-testimony {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature-testimony-image img {
+    display: block;
+    width: 250px;
+    height: 275px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #8c8c8c;
+}
+
+.feature-testimony-quote {
+    font-style: italic;
+	font-size: large;
+    color: #161817;
+    line-height: 1.4;
+}
+
+.feature-partnership-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.partnership-column {
+    flex: 1 1 30%;
+    background: #c8ffea;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: inset 4px 6px 20px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partnership-column:hover {
+    transform: translateY(-5px);
+    box-shadow: inset 4px 6px 20px 10px rgba(0, 0, 0, 0.1);
+}
+
+.partnership-column-header {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.partnership-column-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
 }
