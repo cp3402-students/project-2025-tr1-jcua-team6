@@ -1097,3 +1097,8 @@ Casey's style section (TEMPORARY) - needs refactoring later
     font-size: 1.1rem;
     line-height: 1.7;
 }
+
+.groupsix-p-center {
+	margin-bottom: 1.5em;
+	text-align: center;
+}
