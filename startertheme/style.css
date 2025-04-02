@@ -421,6 +421,8 @@ p {
 	margin-bottom: 1.5em;
 }
 
+
+
 dfn,
 cite,
 em,
@@ -1012,3 +1014,10 @@ Casey's style section for simplicity (TEMPORARY) - needs refactoring later
 	box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle image shadow */
   }
   
+
+  /* center a paragraph with p-center */
+
+  .groupsix-p-center{
+	margin-bottom: 1.5em;
+	text-align: center;
+  }
