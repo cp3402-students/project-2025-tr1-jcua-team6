@@ -1116,3 +1116,8 @@ Casey's style section (TEMPORARY) - needs refactoring later
 	border: 2px dashed #ccc;   /* Dashed border to differentiate */
   }
   
+
+.groupsix-p-center {
+	margin-bottom: 1.5em;
+	text-align: center;
+}
