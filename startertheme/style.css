@@ -1098,10 +1098,14 @@ Casey's style section (TEMPORARY) - needs refactoring later
     line-height: 1.7;
 }
 
-/* Testing adding styles automatically via two different methods:
+.groupsix-p-center {
+	margin-bottom: 1.5em;
+	text-align: center;
+}
+
+/* Tests adding styles automatically via two different methods:
     1. Directly overwriting the WP element styles
-	2. Injecting custom CSS automatically into the WP element styles via PHP	
-*/
+	  2. Injecting custom CSS automatically into the WP element styles via PHP	*/
 
 /* Method 1: Targeting the default WP group element */
 .wp-block-group {
@@ -1114,4 +1118,3 @@ Casey's style section (TEMPORARY) - needs refactoring later
 .custom-gray-group {
 background-color: blue; /* Blue - Distinguishing reasons */
 border: 2px dashed #ccc;   /* Dashed border to differentiate */
-}
