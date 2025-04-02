@@ -1098,6 +1098,11 @@ Casey's style section (TEMPORARY) - needs refactoring later
     line-height: 1.7;
 }
 
+.groupsix-p-center {
+	margin-bottom: 1.5em;
+	text-align: center;
+}
+
 /* Testing adding styles automatically via two different methods:
     1. Directly overwriting the WP element styles
 	2. Injecting custom CSS automatically into the WP element styles via PHP	
@@ -1110,14 +1115,9 @@ Casey's style section (TEMPORARY) - needs refactoring later
 	padding: 20px;
   }
   
-  /* Method 2: Targeting the custom class added by PHP */
-  .custom-gray-group {
-	background-color: blue; /* Blue - Distinguishing reasons */
-	border: 2px dashed #ccc;   /* Dashed border to differentiate */
-  }
-  
-
-.groupsix-p-center {
-	margin-bottom: 1.5em;
-	text-align: center;
+/* Method 2: Targeting the custom class added by PHP */
+.custom-gray-group {
+background-color: blue; /* Blue - Distinguishing reasons */
+border: 2px dashed #ccc;   /* Dashed border to differentiate */
 }
+  
