@@ -203,9 +203,9 @@ function viridian_get_default_classes_for_block( $blockName ) {
         'core/table'     => array( 'wp-block-table' ),
         'core/code'      => array( 'wp-block-code' ),
         'core/button'    => array( 'wp-block-button' ),
-        // Add more default class mappings as needed.
+        'core/list'      => array( 'wp-block-list' ),
+        // Add more defaults as needed.
     );
-    // Return the default classes for the block if set; otherwise, return an empty array.
     return isset( $defaults[ $blockName ] ) ? $defaults[ $blockName ] : array();
 }
 
@@ -227,6 +227,7 @@ function viridian_block_class_mapping() {
         'core/table'     => 'viridian-table',
         'core/code'      => 'viridian-code',
         'core/button'    => 'viridian-button',
+        'core/list'      => 'viridian-list',
         // Add additional mappings as needed.
     );
 }
