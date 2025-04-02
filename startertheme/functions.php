@@ -196,7 +196,7 @@ function viridian_get_default_classes_for_block( $blockName ) {
     $defaults = array(
         'core/paragraph' => array( 'wp-block-paragraph' ),
         'core/heading'   => array( 'wp-block-heading' ),
-        'core/group'     => array( 'wp-block-group' ),
+        'core/group'     => array( 'wp-block-group', 'wp-block-group__inner-container', 'is-layout-constrained', 'wp-block-group-is-layout-constrained'),
         'core/columns'   => array( 'wp-block-columns', 'is-layout-flow', 'wp-block-columns-is-layout-flow' ),
         'core/column'    => array( 'wp-block-column', 'is-layout-flow', 'wp-block-column-is-layout-flow' ),
         'core/quote'     => array( 'wp-block-quote' ),
