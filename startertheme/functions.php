@@ -187,7 +187,32 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 // add_filter( 'render_block', 'add_custom_class_to_group_blocks', 10, 2 );
 
 /**
+ * Retrieve the default CSS classes that WordPress outputs for a given block type.
+ *
+ * @param string $blockName The registered name of the block (e.g., 'core/paragraph').
+ * @return array An array of default class names for the block.
+ */
+function viridian_get_default_classes_for_block( $blockName ) {
+    $defaults = array(
+        'core/paragraph' => array( 'wp-block-paragraph' ),
+        'core/heading'   => array( 'wp-block-heading' ),
+        'core/group'     => array( 'wp-block-group' ),
+        'core/columns'   => array( 'wp-block-columns', 'is-layout-flow', 'wp-block-columns-is-layout-flow' ),
+        'core/column'    => array( 'wp-block-column', 'is-layout-flow', 'wp-block-column-is-layout-flow' ),
+        'core/quote'     => array( 'wp-block-quote' ),
+        'core/table'     => array( 'wp-block-table' ),
+        'core/code'      => array( 'wp-block-code' ),
+        'core/button'    => array( 'wp-block-button' ),
+        // Add more default class mappings as needed.
+    );
+    // Return the default classes for the block if set; otherwise, return an empty array.
+    return isset( $defaults[ $blockName ] ) ? $defaults[ $blockName ] : array();
+}
+
+/**
  * Returns an array mapping WordPress block names to Viridian custom classes.
+ *
+ * These mappings allow us to add our custom theme styles automatically.
  *
  * @return array
  */
@@ -209,34 +234,58 @@ function viridian_block_class_mapping() {
 /**
  * Adds Viridian custom classes to block content.
  *
- * @param string $block_content The block content.
- * @param array  $block         The parsed block data.
- * @return string
+ * This function inspects the rendered block's HTML. If the block's class attribute
+ * contains only the default classes (as defined by WordPress), it appends the
+ * corresponding Viridian custom class. However, if extra (custom) classes are present,
+ * it leaves the block content unchanged.
+ *
+ * @param string $block_content The rendered block HTML.
+ * @param array  $block         The parsed block data (includes the 'blockName').
+ * @return string The modified (or unmodified) block content.
  */
 function viridian_add_custom_classes( $block_content, $block ) {
+    // Retrieve the mapping of block names to Viridian custom classes.
     $mappings = viridian_block_class_mapping();
 
-    // Check if this block's name is in our mapping array.
+    // Check if this block has a mapping defined.
     if ( isset( $block['blockName'] ) && array_key_exists( $block['blockName'], $mappings ) ) {
-        $custom_class = $mappings[ $block['blockName'] ];
+        // Get the Viridian class for this block type.
+        $viridian_class = $mappings[ $block['blockName'] ];
 
-        // Append the custom class to the existing class attribute if present.
-        if ( strpos( $block_content, 'class="' ) !== false ) {
+        // Check if the block content has a class attribute.
+        if ( preg_match( '/class="([^"]+)"/', $block_content, $matches ) ) {
+            // Convert the existing class list (a string) into an array.
+            $existing_classes = preg_split( '/\s+/', trim( $matches[1] ) );
+            // Retrieve the default classes that WordPress outputs for this block.
+            $default_classes = viridian_get_default_classes_for_block( $block['blockName'] );
+            
+            // Identify any extra classes that are not part of the defaults.
+            $extra_classes = array_diff( $existing_classes, $default_classes );
+            
+            // If there are extra (custom) classes, we assume custom styling is in place,
+            // so do not append the Viridian class.
+            if ( ! empty( $extra_classes ) ) {
+                return $block_content;
+            }
+            
+            // Otherwise, append the Viridian class to the existing class attribute.
             $block_content = preg_replace(
-                '/class="([^"]*)"/',
-                'class="$1 ' . esc_attr( $custom_class ) . '"',
+                '/class="([^"]+)"/',
+                'class="$1 ' . esc_attr( $viridian_class ) . '"',
                 $block_content,
                 1
             );
         } else {
-            // If there is no class attribute, add one.
+            // If there is no class attribute, add one with the Viridian class.
             $block_content = preg_replace(
                 '/^<([a-z0-9]+)/i',
-                '<$1 class="' . esc_attr( $custom_class ) . '"',
+                '<$1 class="' . esc_attr( $viridian_class ) . '"',
                 $block_content
             );
         }
     }
+    // Return the modified (or original) block content.
     return $block_content;
 }
+// Hook our function to the 'render_block' filter so it runs on every block render.
 add_filter( 'render_block', 'viridian_add_custom_classes', 10, 2 );
