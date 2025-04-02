@@ -59,6 +59,13 @@ h2, h3, h4, h5, h6 {
 /* Paragraphs & Misc Text */
 p {
     margin-bottom: 1.5em;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 10px;
+    padding: 1em;
+    /*background-color: #8dffbf;*/
 }
 
 dfn, cite, em, i {
@@ -524,6 +531,7 @@ img.custom-logo {
   color: #005f5f;  /* dark teal */
   margin-top: 1.5rem;
   margin-bottom: 1rem;
+  text-align: center;
 }
 .viridian-heading h1 {
   font-size: 2.5rem;
@@ -611,11 +619,14 @@ img.custom-logo {
    Lists
 --------------------------- */
 .viridian-list {
-  margin-bottom: 1.5rem;
-  padding-left: 1.5rem;
-}
+	list-style-type: square;
+	margin: 1.5rem auto;
+	padding-left: 1.5rem;
+	display: table; /* Shrinks the element to its content width */
+  }
+  
 .viridian-list li {
-  margin-bottom: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 
 /* ---------------------------
