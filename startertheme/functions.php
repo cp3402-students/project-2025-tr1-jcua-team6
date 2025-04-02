@@ -176,3 +176,12 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function add_custom_class_to_group_blocks( $block_content, $block ) {
+    // Check if the block is a core group block.
+    if ( isset( $block['blockName'] ) && 'core/group' === $block['blockName'] ) {
+        // Append the custom class to the default group class.
+        $block_content = str_replace( 'wp-block-group', 'wp-block-group custom-gray-group', $block_content );
+    }
+    return $block_content;
+}
+add_filter( 'render_block', 'add_custom_class_to_group_blocks', 10, 2 );
