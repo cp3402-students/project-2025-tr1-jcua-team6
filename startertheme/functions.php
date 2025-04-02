@@ -175,13 +175,68 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+// Test code for automatic group style applying
+// function add_custom_class_to_group_blocks( $block_content, $block ) {
+//     // Check if the block is a core group block.
+//     if ( isset( $block['blockName'] ) && 'core/group' === $block['blockName'] ) {
+//         // Append the custom class to the default group class.
+//         $block_content = str_replace( 'wp-block-group', 'wp-block-group custom-gray-group', $block_content );
+//     }
+//     return $block_content;
+// }
+// add_filter( 'render_block', 'add_custom_class_to_group_blocks', 10, 2 );
 
-function add_custom_class_to_group_blocks( $block_content, $block ) {
-    // Check if the block is a core group block.
-    if ( isset( $block['blockName'] ) && 'core/group' === $block['blockName'] ) {
-        // Append the custom class to the default group class.
-        $block_content = str_replace( 'wp-block-group', 'wp-block-group custom-gray-group', $block_content );
+/**
+ * Returns an array mapping WordPress block names to Viridian custom classes.
+ *
+ * @return array
+ */
+function viridian_block_class_mapping() {
+    return array(
+        'core/paragraph' => 'viridian-paragraph',
+        'core/heading'   => 'viridian-heading',
+        'core/group'     => 'viridian-group',
+        'core/columns'   => 'viridian-columns',
+        'core/column'    => 'viridian-column',
+        'core/quote'     => 'viridian-blockquote',
+        'core/table'     => 'viridian-table',
+        'core/code'      => 'viridian-code',
+        'core/button'    => 'viridian-button',
+        // Add additional mappings as needed.
+    );
+}
+
+/**
+ * Adds Viridian custom classes to block content.
+ *
+ * @param string $block_content The block content.
+ * @param array  $block         The parsed block data.
+ * @return string
+ */
+function viridian_add_custom_classes( $block_content, $block ) {
+    $mappings = viridian_block_class_mapping();
+
+    // Check if this block's name is in our mapping array.
+    if ( isset( $block['blockName'] ) && array_key_exists( $block['blockName'], $mappings ) ) {
+        $custom_class = $mappings[ $block['blockName'] ];
+
+        // Append the custom class to the existing class attribute if present.
+        if ( strpos( $block_content, 'class="' ) !== false ) {
+            $block_content = preg_replace(
+                '/class="([^"]*)"/',
+                'class="$1 ' . esc_attr( $custom_class ) . '"',
+                $block_content,
+                1
+            );
+        } else {
+            // If there is no class attribute, add one.
+            $block_content = preg_replace(
+                '/^<([a-z0-9]+)/i',
+                '<$1 class="' . esc_attr( $custom_class ) . '"',
+                $block_content
+            );
+        }
     }
     return $block_content;
 }
-add_filter( 'render_block', 'add_custom_class_to_group_blocks', 10, 2 );
+add_filter( 'render_block', 'viridian_add_custom_classes', 10, 2 );
