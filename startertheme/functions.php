@@ -204,6 +204,7 @@ function viridian_get_default_classes_for_block( $blockName ) {
         'core/code'      => array( 'wp-block-code' ),
         'core/button'    => array( 'wp-block-button' ),
         'core/list'      => array( 'wp-block-list' ),
+		'core/embed'     => array( 'wp-block-embed__wrapper' ), // Sam's addition
         // Add more defaults as needed.
     );
     return isset( $defaults[ $blockName ] ) ? $defaults[ $blockName ] : array();
@@ -228,6 +229,7 @@ function viridian_block_class_mapping() {
         'core/code'      => 'viridian-code',
         'core/button'    => 'viridian-button',
         'core/list'      => 'viridian-list',
+		'core/embed'     => 'viridian-youtube-embed'
         // Add additional mappings as needed.
     );
 }
