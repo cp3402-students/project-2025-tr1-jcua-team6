@@ -803,3 +803,9 @@ img.custom-logo {
 	margin-bottom: 1rem;
 	text-align: center;
 }
+
+/*added new default to class mapping in functions.php for this to center youtube embed iframes*/
+.viridian-youtube-embed {
+	position: relative;
+  	text-align: center;
+}
