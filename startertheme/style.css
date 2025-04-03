@@ -784,3 +784,10 @@ img.custom-logo {
 	margin-bottom: 1.5em;
 	text-align: center;
 }
+
+.viridian-group-no-background-color {
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 50%;
+    margin: 0 auto 2rem;
+}
