@@ -841,6 +841,46 @@ img.custom-logo {
     padding: 0 0 0 1rem;
 }
 
+/* Style container holding the table */
+.viridian-table {
+	margin-top: 1.5rem;
+	margin-bottom: 2.5rem;
+	border: 1px solid #cce0dd;
+	box-shadow: 0 3px 6px rgba(0, 95, 95, 0.1);
+	border-radius: 6px; /* Slightly rounded corners */
+	overflow: hidden;
+  }
+  
+  /* Header row styling */
+  .viridian-table table tbody tr:first-child td {
+	background-color: #e0f2f1;
+	font-weight: 600;
+	font-size: 1.05em; /* Slightly larger text for header */
+	text-align: center; /* Center-align header text */
+	padding: 1rem 1.25rem;
+	border-bottom: 3px solid #9ad99e; /* Strong bottom border */
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	vertical-align: middle; /* Align header text vertically centered */
+  }
+  
+  /* Targets all rows except first */
+  .viridian-table table tbody tr:not(:first-child) td {
+	padding: 1rem 1.25rem;
+	border: none;
+	border-top: 1px solid #e8f0ef;
+	vertical-align: top;
+  }
+  
+  /* Zebra striping for rows */
+  .viridian-table table tbody tr:nth-child(even):not(:first-child) {
+	background-color: #f7fcfc; /* Very subtle off-white/light teal */
+  }
+  
+  .viridian-table table tbody tr:nth-child(odd):not(:first-child) {
+	background-color: #ffffff;
+  }
 
 /* ============================================
    Group Member / Custom Styles (Alex's Section)
