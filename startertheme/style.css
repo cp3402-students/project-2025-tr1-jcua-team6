@@ -862,3 +862,27 @@ img.custom-logo {
 	padding: 0 50px;
 }
 
+.wpforms-container .wpforms-form * {
+	padding: 0 20px;
+}
+
+.wpforms-field-container {
+	margin-bottom: 25px;
+}
+
+div.wpforms-container-full .wpforms-field-label {
+	padding: 10px 0;
+}
+
+/* div.wpforms-container .wpforms-form * {
+	padding: 0 20px;
+}
+ */
+div.wpforms-container-full .wpforms-submit-container {
+	text-align: center;
+}
+
+#wpforms-submit-368 {
+	background-color: #9ad99e; 
+	color: #000000;
+}
