@@ -824,6 +824,10 @@ img.custom-logo {
     margin: 0;
 }
 
+.viridian-baizonn-linear-gradient {
+	background: linear-gradient(135deg, #1fa889, #1a67a3);
+}
+
 /* ============================================
    Group Member / Custom Styles (Lance's Section)
    ============================================ */
