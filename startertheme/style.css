@@ -331,6 +331,9 @@ img.custom-logo {
 .post,
 .page {
 	margin: 0 0 1.5em;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 .updated:not(.published) {
@@ -840,3 +843,22 @@ img.custom-logo {
     max-width: none;
     padding: 0 0 0 1rem;
 }
+
+
+/* ============================================
+   Group Member / Custom Styles (Alex's Section)
+   ============================================ */
+
+/* Footer styles */
+.viridian-footer {
+	background-color: #005f5f; /* Dark teal background */
+	color: #ffffff; /* White text color */
+	padding: 2rem 0;
+	text-align: center;
+	font-size: 1rem;
+}
+
+.viridian-contact-info {
+	padding: 0 50px;
+}
+
