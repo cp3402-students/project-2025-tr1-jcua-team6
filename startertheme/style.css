@@ -809,6 +809,21 @@ img.custom-logo {
   	text-align: center;
 }
 
+.viridian-full-width-panel {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #005f5f; 
+}
+
+.viridian-full-width-panel .viridian-entry-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
 /* ============================================
    Group Member / Custom Styles (Lance's Section)
    ============================================ */
