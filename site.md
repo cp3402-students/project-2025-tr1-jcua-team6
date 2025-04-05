@@ -1,3 +1,4 @@
-# Placeholder for Site
+# Baizonn Learning Center
 
-> Create documentation to explain how our site was created an how an external developer/team can take over this project.
+## The Baizonn Learning Center website uses this Viridian theme.  
+
