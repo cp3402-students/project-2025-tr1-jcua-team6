@@ -814,7 +814,7 @@ img.custom-logo {
     max-width: 100%;
     padding: 0;
     margin: 0;
-    background: linear-gradient(135deg, #1fa889, #1a67a3); 
+    background: linear-gradient(135deg, #caf5ec, #c8e2f6); 
 }
 
 .viridian-full-width-panel .viridian-entry-content {
@@ -826,6 +826,10 @@ img.custom-logo {
 
 .viridian-baizonn-linear-gradient {
 	background: linear-gradient(135deg, #1fa889, #1a67a3);
+}
+
+.viridian-baizonn-linear-gradient-lighter {
+	background: linear-gradient(135deg, #caf5ec, #c8e2f6);
 }
 
 @media only screen and (max-width: 767px) {
