@@ -6,16 +6,38 @@
    - Lance Howell
 
    THEME NAME: Viridian
-   Description: ...
+   Description: The integration and creation of the Viridian theme was complete by Casey. Base styles located outside of the designated 'Custom CSS' sections (at the bottom) were 
+   either included in the default template or were added by Casey. Other group contributions, including based Viridian styles and custom CSS, are located in the dedicated 
+   'Custom CSS' sections at the bottom of this file.
+
+   The Viridian theme is named after the various hues of green present on the website, and the overall theme. The Viridian theme pruposefully uses the lighter shades of green
+   to encourage a light and approachable feeling that invites a sense of trust within the target audience of parents. This is due to the subscious association of green with success,
+   and moving forward in a positive way.
+   
+   In regard to structure and layout, the Viridian theme is designed to be clean and simple, with a focus on readability and ease of navigation. The use of white space and clear 
+   headings helps to guide the user's eye through the content, while the use of color adds visual interest without overwhelming the user. It is this balance that purposefully
+   highlights elements that need additional attention, such as the call-to-action buttons and important information.
 
    Table of Contents for `style.css`:
-       ...
+       1. Default template styles ("Global & Generic Base")
+	   2. Viridian theme styles ("VIRIDIAN THEME STYLES") (Casey)
+	   3. Group Member / Custom Styles (Casey's Section)
+	   4. Group Member / Custom Styles (Sam's Section)
+	   5. Group Member / Custom Styles (Lance's Section)
+	   6. Group Member / Custom Styles (Alex's Section) 
 
-   Version details:
+   Version details (superficial):
+   1.0.0 - Initial release of the Viridian theme.
+   1.0.1 - Added custom CSS sections for the Viridian theme.
+   1.1.0 - Added custom CSS for the Viridian theme, including styles for headings, paragraphs, links, and buttons.
    ...
 
    Requirements:
-   ...
+   - WordPress 6.0 or later
+   - PHP 7.4 or later
+   - Knowledge of HTML, CSS, and WordPress theme development via PHP
+   - .yaml environment setup file for local development (e.g., Docker, Vagrant, etc.)
+   - Hosting platform that supports WordPress (e.g., DigitalOcean, SiteGround, etc.)
 */
 
 /* ============================================
@@ -150,6 +172,7 @@ button, select {
 /* Button appearance for consistency */
 button, [type="button"], [type="reset"], [type="submit"] {
 	-webkit-appearance: button;
+	appearance: button;
 }
 
 /* Remove inner padding and border in Firefox */
@@ -199,17 +222,6 @@ hr {
 	height: 1px;
 	margin-bottom: 1.5em;
 }
-
-
-/* ============================================
-   Layout & Structural Elements
-   ============================================ */
-
-/* (Optional) Global Layout Container */
-body {
-	/* Use the existing body styles above for global layout */
-}
-
 
 /* ============================================
    Components
@@ -516,7 +528,7 @@ img.custom-logo {
    !!! VIRIDIAN THEME STYLES !!!
    ============================================ */
 
-/* Global Base (optional – applied via a body class if desired) */
+/* Global Base */
 .viridian-body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #333;
@@ -679,6 +691,18 @@ img.custom-logo {
    Group Member / Custom Styles (Casey's Section)
    ============================================ */
 
+/* uses custom PHP handling for rows and stacks since they are not native 'core' elements. 
+This allows the viridian theme to center both elements with spacing automatically*/
+.viridian-row {
+	justify-content: center;
+    gap: 2em;
+}
+
+.viridian-stack {
+	align-content: center;
+    gap: 5px;
+}
+
 /* Feature bubble styling */
 .feature-bubble {
 	background-color: #9ad99e;
@@ -711,7 +735,7 @@ img.custom-logo {
 .feature-image img {
 	max-width: 100%;                /* Responsive image sizing */
 	border-radius: 10px;            /* Rounded corners */
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .feature-description {
@@ -992,8 +1016,8 @@ div.wpforms-container-full .wpforms-field-label {
 
 /* div.wpforms-container .wpforms-form * {
 	padding: 0 20px;
-}
- */
+} */
+
 div.wpforms-container-full .wpforms-submit-container {
 	text-align: center;
 }
