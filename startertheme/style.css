@@ -884,44 +884,83 @@ img.custom-logo {
 
 /* Style container holding the table */
 .viridian-table {
-	margin-top: 1.5rem;
-	margin-bottom: 2.5rem;
-	border: 1px solid #cce0dd;
-	box-shadow: 0 3px 6px rgba(0, 95, 95, 0.1);
-	border-radius: 6px; /* Slightly rounded corners */
-	overflow: hidden;
-  }
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+    border: 1px solid #cce0dd;
+    box-shadow: 0 3px 6px rgba(0, 95, 95, 0.1);
+    border-radius: 6px; /* Slightly rounded corners */
+    overflow: hidden;
+}
+
+/* Header row styling */
+.viridian-table table tbody tr:first-child td {
+    background-color: #e0f2f1;
+    font-weight: 600;
+    font-size: 1.05em;
+    text-align: center;
+    padding: 1rem 1.25rem;
+    border-bottom: 3px solid #9ad99e;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    vertical-align: middle;
+}
+
+/* Targets all rows except first */
+.viridian-table table tbody tr:not(:first-child) td {
+    padding: 1rem 1.25rem;
+    border: none;
+    border-top: 1px solid #e8f0ef;
+    vertical-align: top;
+}
+
+/* Zebra striping for rows */
+.viridian-table table tbody tr:nth-child(even):not(:first-child) {
+    background-color: #f7fcfc;
+}
+
+.viridian-table table tbody tr:nth-child(odd):not(:first-child) {
+    background-color: #ffffff;
+}
+
+/* Layout container, centers content and limits max width */
+.viridian-content-section {
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Style for promotions box */
+.viridian-promo-box {
+    background-color: #f7fcfc;
+    border: 1px solid #cce0dd;
+    border-left: 5px solid #9ad99e;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 95, 95, 0.1);
+}
+
+/* Style heading within the promo box */
+.viridian-promo-box .viridian-heading {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+/* Style paragraph within the promo box */
+.viridian-promo-box p {
+    margin-bottom: 0.75rem;
+    text-align: center;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
+
   
-  /* Header row styling */
-  .viridian-table table tbody tr:first-child td {
-	background-color: #e0f2f1;
-	font-weight: 600;
-	font-size: 1.05em; /* Slightly larger text for header */
-	text-align: center; /* Center-align header text */
-	padding: 1rem 1.25rem;
-	border-bottom: 3px solid #9ad99e; /* Strong bottom border */
-	border-top: none;
-	border-left: none;
-	border-right: none;
-	vertical-align: middle; /* Align header text vertically centered */
-  }
-  
-  /* Targets all rows except first */
-  .viridian-table table tbody tr:not(:first-child) td {
-	padding: 1rem 1.25rem;
-	border: none;
-	border-top: 1px solid #e8f0ef;
-	vertical-align: top;
-  }
-  
-  /* Zebra striping for rows */
-  .viridian-table table tbody tr:nth-child(even):not(:first-child) {
-	background-color: #f7fcfc; /* Very subtle off-white/light teal */
-  }
-  
-  .viridian-table table tbody tr:nth-child(odd):not(:first-child) {
-	background-color: #ffffff;
-  }
 
 /* ============================================
    Group Member / Custom Styles (Alex's Section)
