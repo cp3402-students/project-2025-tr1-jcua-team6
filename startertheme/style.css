@@ -777,7 +777,7 @@ img.custom-logo {
 }
 
 /* ============================================
-   Group Member / Custom Styles (Samuel's Section)
+   Group Member / Custom Styles (Sam's Section)
    ============================================ */
 
 .groupsix-p-center {
@@ -830,6 +830,10 @@ img.custom-logo {
 
 .viridian-baizonn-linear-gradient-lighter {
 	background: linear-gradient(135deg, #caf5ec, #c8e2f6);
+}
+
+.viridian-rounded-border {
+	border-radius: 20px;
 }
 
 @media only screen and (max-width: 767px) {
