@@ -112,7 +112,7 @@ a {
 	text-decoration: none;
 }
 a:visited {
-	color: blue;
+	color: #1a67a3;
 }
 a:hover, a:focus, a:active {
 	color: #191970;
