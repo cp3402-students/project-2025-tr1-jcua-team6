@@ -1003,3 +1003,16 @@ div.wpforms-container-full .wpforms-submit-container {
 	background-color: #9ad99e; 
 	color: #000000;
 }
+
+#primary-menu a,
+#primary-menu a:visited {
+	color:#000000
+}
+
+#primary-menu a:hover {
+	color:#005f5f
+}
+
+#primary-menu a:focus {
+	color:#000000
+}
