@@ -1,6 +1,6 @@
 # README
 
-## Viridian Wordpress theme for the Baizonn Learning Centre
+## Viridian Wordpress theme
 ### Group 6
 
-- This is a custom theme created by Group 6
+- Viridian is a modern WordPress theme created by Group 6
