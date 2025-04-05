@@ -175,6 +175,8 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+
 // Test code for automatic group style applying
 // function add_custom_class_to_group_blocks( $block_content, $block ) {
 //     // Check if the block is a core group block.
@@ -196,7 +198,7 @@ function viridian_get_default_classes_for_block( $blockName ) {
     $defaults = array(
         'core/paragraph' => array( 'wp-block-paragraph' ),
         'core/heading'   => array( 'wp-block-heading' ),
-        'core/group'     => array( 'wp-block-group', 'wp-block-group__inner-container', 'is-layout-constrained', 'wp-block-group-is-layout-constrained'),
+        'core/group'     => array( 'wp-block-group', 'wp-block-group__inner-container', 'is-layout-constrained', 'wp-block-group-is-layout-constrained' ),
         'core/columns'   => array( 'wp-block-columns', 'is-layout-flow', 'wp-block-columns-is-layout-flow' ),
         'core/column'    => array( 'wp-block-column', 'is-layout-flow', 'wp-block-column-is-layout-flow' ),
         'core/quote'     => array( 'wp-block-quote' ),
@@ -204,7 +206,7 @@ function viridian_get_default_classes_for_block( $blockName ) {
         'core/code'      => array( 'wp-block-code' ),
         'core/button'    => array( 'wp-block-button' ),
         'core/list'      => array( 'wp-block-list' ),
-		'core/embed'     => array( 'wp-block-embed__wrapper' ), // Sam's addition
+        'core/embed'     => array( 'wp-block-embed__wrapper' ), // Sam's addition
         // Add more defaults as needed.
     );
     return isset( $defaults[ $blockName ] ) ? $defaults[ $blockName ] : array();
@@ -229,7 +231,7 @@ function viridian_block_class_mapping() {
         'core/code'      => 'viridian-code',
         'core/button'    => 'viridian-button',
         'core/list'      => 'viridian-list',
-		'core/embed'     => 'viridian-youtube-embed'
+		'core/embed'     => 'viridian-youtube-embed' 
         // Add additional mappings as needed.
     );
 }
@@ -292,3 +294,42 @@ function viridian_add_custom_classes( $block_content, $block ) {
 }
 // Hook our function to the 'render_block' filter so it runs on every block render.
 add_filter( 'render_block', 'viridian_add_custom_classes', 10, 2 );
+
+/**
+ * Dynamically adds Viridian classes for row and stack groups by detecting unique HTML markers.
+ *
+ * The function looks for specific unique class markers in the HTML that indicate
+ * a row or stack layout. For rows, it checks for the presence of 'wp-container-core-group-is-layout-2'
+ * and 'is-horizontal'. For stacks, it checks for 'wp-container-core-group-is-layout-3'
+ * and 'is-vertical'. When detected, it appends the appropriate Viridian class.
+ *
+ * @param string $block_content The rendered block HTML.
+ * @return string The modified block content.
+ */
+function viridian_dynamic_row_stack_classes( $block_content ) {
+    // Detect row: unique classes for row layout.
+    if ( strpos( $block_content, 'wp-container-core-group-is-layout-2' ) !== false && strpos( $block_content, 'is-horizontal' ) !== false ) {
+        // Append the custom viridian row class.
+        $block_content = preg_replace(
+            '/class="([^"]+)"/',
+            'class="$1 viridian-row"',
+            $block_content,
+            1
+        );
+    }
+    
+    // Detect stack: unique classes for stack layout.
+    if ( strpos( $block_content, 'wp-container-core-group-is-layout-3' ) !== false && strpos( $block_content, 'is-vertical' ) !== false ) {
+        // Append the custom viridian stack class.
+        $block_content = preg_replace(
+            '/class="([^"]+)"/',
+            'class="$1 viridian-stack"',
+            $block_content,
+            1
+        );
+    }
+    
+    return $block_content;
+}
+// Hook the dynamic row/stack class handler with a priority that ensures it runs after the main class function.
+add_filter( 'render_block', 'viridian_dynamic_row_stack_classes', 11 );
