@@ -5,7 +5,7 @@
 ## Adding new content
 - All content of the theme are contained in individual pages.
 - Select the pages tab and the the specific page required to add or remove content.
-- Most of the unique Viridian CSS style is automatically mapped to [WordPress core block elements](https://developer.wordpress.org/block-editor/reference-guides/core-blocks/#embed) through the functions.php file. Additional defaults can be added if required and the relative CSS class can be coded into the appropriate section of the styles.css file.
+- Most of the unique Viridian CSS style is automatically mapped to [WordPress core block elements](https://developer.wordpress.org/block-editor/reference-guides/core-blocks/#embed) through the functions.php file:
 ```
 /**
  * Retrieve the default CSS classes that WordPress outputs for a given block type.
@@ -55,9 +55,10 @@ function viridian_block_class_mapping() {
     );
 }
 ```
+- Additional defaults and mappings can be added in the commented areas of the fucntions above if required. Please note that the relative CSS class still needs be coded into the appropriate section of the styles.css file.
 - A number of additional unmapped custom CSS classes are also provided for use in well described sections of the styles.css file.
 
 ## Navigation
 - To see any new pages created in the menu they must be added to Appearance/menus.
 - The menu to be selected to edit is "nav-menu(Primary)".
-- Select your new page from the left panel and then move into the required order and save. 
+- Select your new page from the left panel and then move into the required order and save.
