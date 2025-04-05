@@ -1,4 +1,5 @@
-# Placeholder README
+# README
+## Viridian WordPress theme - Created by Group6
 Members(A-Z):
 - [Alexander Johnstone](https://github.com/alexjohnstone29) [LinkedIn](https://www.linkedin.com/in/alexander-johnstone-b93793117/)
 - [Casey Summers](https://github.com/Casey-Summers) [LinkedIn](https://www.linkedin.com/in/casey-summers-b2ba3a30a/)
