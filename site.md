@@ -3,8 +3,12 @@
 **The Baizonn Learning Center website uses the Viridian theme.**  
 
 ## Adding new content
-- All content of the theme are contained in individual pages.
-- Select the pages tab and the the specific page required to add or remove content.
+- All the content of the theme is contained in individual pages.
+- Select the pages tab and the specific page required to add or remove content.
+- Create a new page to add additonal page content.
+- There is the option in the "Quick Edit" link of each page in the "Templates" tab to choose the "Default template" or "Full-Width page" template.  
+
+## Styling content
 - Most of the unique Viridian CSS style is automatically mapped to [WordPress core block elements](https://developer.wordpress.org/block-editor/reference-guides/core-blocks/#embed) through the functions.php file:
 ```
 /**
