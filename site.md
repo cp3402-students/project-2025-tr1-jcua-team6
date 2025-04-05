@@ -55,7 +55,7 @@ function viridian_block_class_mapping() {
     );
 }
 ```
-- Additional defaults and mappings can be added in the commented areas of the fucntions above if required. Please note that the relative CSS class still needs be coded into the appropriate section of the styles.css file.
+- Additional defaults and mappings can be added in the commented areas of the fucntions above if required. Please note that the relative CSS class still needs to be coded into the appropriate section of the styles.css file.
 - A number of additional unmapped custom CSS classes are also provided for use in well described sections of the styles.css file.
 
 ## Navigation
