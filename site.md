@@ -66,3 +66,10 @@ function viridian_block_class_mapping() {
 - To see any new pages created in the menu they must be added to Appearance/menus.
 - The menu to be selected to edit is "nav-menu(Primary)".
 - Select your new page from the left panel and then move into the required order and save.
+
+## Back-ups and Migration
+- The plug-in 'All-In-On WP Migration and Back-up' is installed for setting up scheduled back-ups and organising migration to the production server as a manual process.
+- If you require an automatic migration process this plug-in has a paid option for this functionality available.
+
+## Settings
+- Permalink settings are set to 'Custom Structure' for development and testing. This can be changed to 'Post name' in the production site to meet best SEO standards and practices.
