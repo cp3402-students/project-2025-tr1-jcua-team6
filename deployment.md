@@ -32,17 +32,6 @@ will need to be changed if the startertheme folder name is changed
 Development branches can be separately created and once merged into staging will also trigger the action.
 
 
-
-
-
-
-
-
-
-
-
-
-
 # Project management
 We use Trello to manage all theme development tasks. The board is structured into the following columns:
 - **Next Actions**: Unassigned tasks that are ready to be picked up.
@@ -63,8 +52,13 @@ git pull origin staging
 git checkout -b your-branch-name
 ```
 2. Make your changes locally, commit regularly and push your branch to GitHub.
-3. Open a pull request to merge your branch into staging.
-4. If everything works as intended merge staging into main to deploy the changes to the live site.
+```
+git add .
+git commit -m "Describe your changes"
+git push origin your-branch-name
+```
+4. Open a pull request to merge your branch into staging.
+5. If everything works as intended merge staging into main to deploy the changes to the live site.
 
 # Development
 1. Set up a local WordPress development environment such as [LocalWP](https://localwp.com/).
