@@ -204,7 +204,7 @@ function viridian_get_default_classes_for_block( $blockName ) {
         'core/quote'     => array( 'wp-block-quote' ),
         'core/table'     => array( 'wp-block-table' ),
         'core/code'      => array( 'wp-block-code' ),
-        'core/button'    => array( 'wp-block-button' ),
+        'core/button'    => array( 'wp-block-button'),
         'core/list'      => array( 'wp-block-list' ),
         'core/embed'     => array( 'wp-block-embed__wrapper' ), // Sam's addition
         // Add more defaults as needed.
@@ -240,9 +240,9 @@ function viridian_block_class_mapping() {
  * Adds Viridian custom classes to block content.
  *
  * This function inspects the rendered block's HTML. If the block's class attribute
- * contains only the default classes (as defined by WordPress), it appends the
- * corresponding Viridian custom class. However, if extra (custom) classes are present,
- * it leaves the block content unchanged.
+ * contains only the default classes (as defined by WordPress) or extra classes that are
+ * permitted (e.g. size editor classes), it appends the corresponding Viridian custom class.
+ * If other custom classes are detected, it leaves the block content unchanged.
  *
  * @param string $block_content The rendered block HTML.
  * @param array  $block         The parsed block data (includes the 'blockName').
@@ -267,9 +267,18 @@ function viridian_add_custom_classes( $block_content, $block ) {
             // Identify any extra classes that are not part of the defaults.
             $extra_classes = array_diff( $existing_classes, $default_classes );
             
-            // If there are extra (custom) classes, we assume custom styling is in place,
-            // so do not append the Viridian class.
-            if ( ! empty( $extra_classes ) ) {
+            // Define a list of allowed extra classes that should not block adding the Viridian class.
+            // For example, the size editor may add 'has-custom-font-size'.
+            $allowed_extras = array(
+                'has-custom-font-size'
+                // Add more allowed extras as needed per block type.
+            );
+
+            // Filter out the allowed extras from the extra classes.
+            $filtered_extras = array_diff( $extra_classes, $allowed_extras );
+
+            // If there are extra classes beyond the allowed list, assume custom styling is in place.
+            if ( ! empty( $filtered_extras ) ) {
                 return $block_content;
             }
             

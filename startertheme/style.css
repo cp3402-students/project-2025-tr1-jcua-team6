@@ -703,6 +703,14 @@ This allows the viridian theme to center both elements with spacing automaticall
     gap: 5px;
 }
 
+.viridian-CTA-text {
+	text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    max-width: 30%;
+}
+
 /* Feature bubble styling */
 .feature-bubble {
 	background-color: #9ad99e;
