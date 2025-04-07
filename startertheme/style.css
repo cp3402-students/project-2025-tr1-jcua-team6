@@ -711,6 +711,18 @@ This allows the viridian theme to center both elements with spacing automaticall
     max-width: 30%;
 }
 
+.viridian-pullquote {
+	box-sizing: border-box;
+    margin: 0 0 1em;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+.viridian-small-group {
+	transform: scale(0.6);
+    max-width: 60%;
+}
+
 /* Feature bubble styling */
 .feature-bubble {
 	background-color: #9ad99e;
@@ -810,6 +822,13 @@ This allows the viridian theme to center both elements with spacing automaticall
 	font-size: 1.1rem;
 	line-height: 1.7;
 }
+
+.invisible {
+	background-color: inherit;
+    border-color: transparent;
+    box-shadow: none;
+}
+
 
 /* ============================================
    Group Member / Custom Styles (Sam's Section)

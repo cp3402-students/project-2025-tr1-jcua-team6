@@ -202,9 +202,10 @@ function viridian_get_default_classes_for_block( $blockName ) {
         'core/columns'   => array( 'wp-block-columns', 'is-layout-flow', 'wp-block-columns-is-layout-flow' ),
         'core/column'    => array( 'wp-block-column', 'is-layout-flow', 'wp-block-column-is-layout-flow' ),
         'core/quote'     => array( 'wp-block-quote' ),
+        'core/pullquote' => array( 'wp-block-pullquote' ),
         'core/table'     => array( 'wp-block-table' ),
         'core/code'      => array( 'wp-block-code' ),
-        'core/button'    => array( 'wp-block-button'),
+        'core/button'    => array( 'wp-block-button' ),
         'core/list'      => array( 'wp-block-list' ),
         'core/embed'     => array( 'wp-block-embed__wrapper' ), // Sam's addition
         // Add more defaults as needed.
@@ -227,11 +228,12 @@ function viridian_block_class_mapping() {
         'core/columns'   => 'viridian-columns',
         'core/column'    => 'viridian-column',
         'core/quote'     => 'viridian-blockquote',
+        'core/pullquote' => 'viridian-pullquote',
         'core/table'     => 'viridian-table',
         'core/code'      => 'viridian-code',
         'core/button'    => 'viridian-button',
         'core/list'      => 'viridian-list',
-		'core/embed'     => 'viridian-youtube-embed' 
+        'core/embed'     => 'viridian-youtube-embed'
         // Add additional mappings as needed.
     );
 }
@@ -263,10 +265,10 @@ function viridian_add_custom_classes( $block_content, $block ) {
             $existing_classes = preg_split( '/\s+/', trim( $matches[1] ) );
             // Retrieve the default classes that WordPress outputs for this block.
             $default_classes = viridian_get_default_classes_for_block( $block['blockName'] );
-            
+
             // Identify any extra classes that are not part of the defaults.
             $extra_classes = array_diff( $existing_classes, $default_classes );
-            
+
             // Define a list of allowed extra classes that should not block adding the Viridian class.
             // For example, the size editor may add 'has-custom-font-size'.
             $allowed_extras = array(
@@ -281,7 +283,7 @@ function viridian_add_custom_classes( $block_content, $block ) {
             if ( ! empty( $filtered_extras ) ) {
                 return $block_content;
             }
-            
+
             // Otherwise, append the Viridian class to the existing class attribute.
             $block_content = preg_replace(
                 '/class="([^"]+)"/',
@@ -326,7 +328,7 @@ function viridian_dynamic_row_stack_classes( $block_content ) {
             1
         );
     }
-    
+
     // Detect stack: unique classes for stack layout.
     if ( strpos( $block_content, 'wp-container-core-group-is-layout-3' ) !== false && strpos( $block_content, 'is-vertical' ) !== false ) {
         // Append the custom viridian stack class.
@@ -337,7 +339,7 @@ function viridian_dynamic_row_stack_classes( $block_content ) {
             1
         );
     }
-    
+
     return $block_content;
 }
 // Hook the dynamic row/stack class handler with a priority that ensures it runs after the main class function.
