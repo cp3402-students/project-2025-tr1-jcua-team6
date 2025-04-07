@@ -699,8 +699,10 @@ This allows the viridian theme to center both elements with spacing automaticall
 }
 
 .viridian-stack {
-	align-content: center;
+    align-content: center;
     gap: 5px;
+    max-width: 50%;
+    margin: 0 auto;
 }
 
 .viridian-CTA-text {
