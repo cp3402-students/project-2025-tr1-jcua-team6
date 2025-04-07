@@ -5,9 +5,17 @@
    - Samuel Barret
    - Lance Howell
 
-   THEME NAME: Viridian
-   Description: The integration and creation of the Viridian theme was complete by Casey. Base styles located outside of the designated 'Custom CSS' sections (at the bottom) were 
-   either included in the default template or were added by Casey. Other group contributions, including based Viridian styles and custom CSS, are located in the dedicated 
+    Theme Name: Viridian
+	Theme URI: https://github.com/cp3402-students/project-2025-tr1-jcua-team6
+	Author: Casey Summers, Samuel Barret, Lance Howell, Alex Johnstone
+	Author URI: https://github.com/Casey-Summers
+	Description: A custom theme for WordPress that takes inspiration from the Viridian colour palette and design principles. The theme is designed to be clean, simple, and easy to 
+	navigate, with a focus on readability and accessibility. The theme is built using HTML, CSS, and PHP to automatically apply when using the default WordPress editor.
+	Version: 1.0
+	Text Domain: viridian
+
+   Custom description: The integration and creation of the Viridian theme was complete by Casey. Base styles located outside of the designated 'Custom CSS' sections (at the bottom) 
+   were either included in the default template or were added by Casey. Other group contributions, including based Viridian styles and custom CSS, are located in the dedicated 
    'Custom CSS' sections at the bottom of this file.
 
    The Viridian theme is named after the various hues of green present on the website, and the overall theme. The Viridian theme pruposefully uses the lighter shades of green
