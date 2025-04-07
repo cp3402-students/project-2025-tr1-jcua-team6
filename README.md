@@ -4,9 +4,14 @@
 > Developed by Casey Summers, Samuel Barrett, Lance Howell, and Alex Johnstone as members of JCU Group 6 for the subject CP3402
 
 ## Overview
-This repository contains the custom WordPress theme **Viridian**, developed from the [Underscores](https://underscores.me/) starter theme as part of the CP3402 project to create a simple website for the company 'Baizonn' using some provided raw content. The theme is designed with a clean and modern aesthetic, tailored to [insert brief description of the target audience or client purpose].
+This repository contains the custom WordPress theme **Viridian**, developed from the [Underscores](https://underscores.me/) starter theme as part of the CP3402 project to create a simple website for the company [Baizonn](https://baizonnlearningctr.com/) using some provided raw content. The theme focuses on several shades and hues of gentle greens to showcase a clean and modern aesthetic tailored to an inviting learning environment. The clarity, structure, and content of the theme target parents of students:
+- Primary School 1-6 students
+- Secondary School 1-4 students
+- Junior College 1-2 students
 
-_Example: "Viridian was built for a parenting-focused website with the goal of creating a calm and trustworthy digital experience."_
+Thus, the theme purposefully incorporates extra spacing, center-aligned elements, and subtle highlights to draw attention to areas of interest. Additionally, few interactive elements have been included to prevent parents from becoming distracted or confused by site elements not related to the **main goal of registering new students**. 
+
+For more information on how the theme works, please visit the [Theme Developer Guide](theme.md).
 
 ## Features
 - Custom block styling based on block types (e.g., headings, paragraphs, quotes)
@@ -23,11 +28,10 @@ Casey Summers | [LinkedIn Profile](https://www.linkedin.com/in/casey-summers-b2b
 Samuel Barrett | [LinkedIn Profile](https://www.linkedin.com/in/sam-barrett-388526356/) | [GitHub Profile](https://github.com/SamBarrett1) <br>
 
 ## Live Links
-- **Production site**: [Baizonn Website](http://09042025.xyz) | [WP Admin](http://09042025.xyz/wp-admin/)
-- **Staging site**: [Baizonn Website](http://209.38.89.77) | [WP Admin](http://209.38.89.77/wp-admin/)
+- **Production site**: [Baizonn Website](http://09042025.xyz) | [WP Admin](http://09042025.xyz/wp-admin/) (password not provided)
+- **Staging site**: [Baizonn Website](http://209.38.89.77) | [WP Admin](http://209.38.89.77/wp-admin/) (password not provided)
 
 ## Documentation
 - [Deployment Guide](deployment.md)
 - [Theme Developer Guide](theme.md)
 - [Site Management Guide](site.md)
-
