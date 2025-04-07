@@ -6,6 +6,7 @@ on:
       - staging
     paths:
       - 'startertheme/**'
+  workflow_dispatch: 
 
 jobs:
   deploy:
@@ -26,6 +27,6 @@ jobs:
           ssh -i private_key.pem -o StrictHostKeyChecking=no $SSH_USER@$DROPLET_IP "mkdir -p $WP_CONTENT_PATH"
           rsync -avz --delete \
             -e "ssh -i private_key.pem -o StrictHostKeyChecking=no" \
-            wp-content/ \
+            startertheme/ \
             $SSH_USER@$DROPLET_IP:$WP_CONTENT_PATH
           rm private_key.pem # Remove the private key file after use
