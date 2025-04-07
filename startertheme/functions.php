@@ -307,19 +307,16 @@ function viridian_add_custom_classes( $block_content, $block ) {
 add_filter( 'render_block', 'viridian_add_custom_classes', 10, 2 );
 
 /**
- * Dynamically adds Viridian classes for row and stack groups by detecting unique HTML markers.
+ * Dynamically adds Viridian classes for row and stack groups by detecting specific layout markers.
  *
- * The function looks for specific unique class markers in the HTML that indicate
- * a row or stack layout. For rows, it checks for the presence of 'wp-container-core-group-is-layout-2'
- * and 'is-horizontal'. For stacks, it checks for 'wp-container-core-group-is-layout-3'
- * and 'is-vertical'. When detected, it appends the appropriate Viridian class.
+ * Now the function will only check for 'is-horizontal' for rows and 'is-vertical' for stacks.
  *
  * @param string $block_content The rendered block HTML.
  * @return string The modified block content.
  */
 function viridian_dynamic_row_stack_classes( $block_content ) {
-    // Detect row: unique classes for row layout.
-    if ( strpos( $block_content, 'wp-container-core-group-is-layout-2' ) !== false && strpos( $block_content, 'is-horizontal' ) !== false ) {
+    // Detect row: if the block contains 'is-horizontal'.
+    if ( strpos( $block_content, 'is-horizontal' ) !== false ) {
         // Append the custom viridian row class.
         $block_content = preg_replace(
             '/class="([^"]+)"/',
@@ -329,8 +326,8 @@ function viridian_dynamic_row_stack_classes( $block_content ) {
         );
     }
 
-    // Detect stack: unique classes for stack layout.
-    if ( strpos( $block_content, 'wp-container-core-group-is-layout-3' ) !== false && strpos( $block_content, 'is-vertical' ) !== false ) {
+    // Detect stack: if the block contains 'is-vertical'.
+    if ( strpos( $block_content, 'is-vertical' ) !== false ) {
         // Append the custom viridian stack class.
         $block_content = preg_replace(
             '/class="([^"]+)"/',
