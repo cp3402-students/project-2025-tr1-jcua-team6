@@ -15,6 +15,23 @@ For more information on how the theme works, please visit the [Theme Developer G
 
 ---
 
+## Members (A-Z):
+Alex Johnstone | [LinkedIn Profile](https://www.linkedin.com/in/alexander-johnstone-b93793117/) | [GitHub Profile](https://github.com/alexjohnstone29) <br>
+Lance Howell  | [LinkedIn Profile](https://www.linkedin.com/in/lance-1-b0520334a/) | [GitHub Profile](https://github.com/Lance791854) <br>
+Casey Summers | [LinkedIn Profile](https://www.linkedin.com/in/casey-summers-b2ba3a30a/) | [GitHub Profile](https://github.com/Casey-Summers) <br>
+Samuel Barrett | [LinkedIn Profile](https://www.linkedin.com/in/sam-barrett-388526356/) | [GitHub Profile](https://github.com/SamBarrett1) <br>
+
+## Live Links
+- **Production site**: [Baizonn Website](http://09042025.xyz) | [WP Admin](http://09042025.xyz/wp-admin/) (password not provided)
+- **Staging site**: [Baizonn Website](http://209.38.89.77) | [WP Admin](http://209.38.89.77/wp-admin/) (password not provided)
+
+## Documentation
+- [Deployment Guide](deployment.md)
+- [Theme Developer Guide](theme.md)
+- [Site Management Guide](site.md)
+
+---
+
 ## Features
 - Automatic mapping between core block and Viridian styles based on block types (headings, paragraphs, groups, columns, etc)
   - Uses PHP code to retrieve classes assigned to core blocks and injects custom theme alongside core theme
@@ -47,20 +64,3 @@ For more information on how the theme works, please visit the [Theme Developer G
 >   margin: 0 auto;
 > }
 > ```
-
----
-
-## Members (A-Z):
-Alex Johnstone | [LinkedIn Profile](https://www.linkedin.com/in/alexander-johnstone-b93793117/) | [GitHub Profile](https://github.com/alexjohnstone29) <br>
-Lance Howell  | [LinkedIn Profile](https://www.linkedin.com/in/lance-1-b0520334a/) | [GitHub Profile](https://github.com/Lance791854) <br>
-Casey Summers | [LinkedIn Profile](https://www.linkedin.com/in/casey-summers-b2ba3a30a/) | [GitHub Profile](https://github.com/Casey-Summers) <br>
-Samuel Barrett | [LinkedIn Profile](https://www.linkedin.com/in/sam-barrett-388526356/) | [GitHub Profile](https://github.com/SamBarrett1) <br>
-
-## Live Links
-- **Production site**: [Baizonn Website](http://09042025.xyz) | [WP Admin](http://09042025.xyz/wp-admin/) (password not provided)
-- **Staging site**: [Baizonn Website](http://209.38.89.77) | [WP Admin](http://209.38.89.77/wp-admin/) (password not provided)
-
-## Documentation
-- [Deployment Guide](deployment.md)
-- [Theme Developer Guide](theme.md)
-- [Site Management Guide](site.md)
