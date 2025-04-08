@@ -160,21 +160,26 @@ Since we didn’t have a GitHub action in place, we used the **WPvivid Backup** 
 
 ## Project Management
 We use **Trello** to manage team tasks and workflows. The board is structured as follows:
-- **Next Actions** — Tasks ready to begin.
-- **To-Do** — Assigned but not started.
-- **In Progress** — Currently being developed.
-- **Done** — Completed and deployed to staging or live.
+- **Next Actions** - Tasks ready to begin.
+- **To-Do** - Assigned but not started.
+- **In Progress** - Currently being developed.
+- **Done** - Completed and deployed to staging or live.
+
 All Trello updates are automatically lodged within our group [Slack channel](https://app.slack.com/client/T0C3E7EP2/G011K4DHGG6), which keeps a relevant version history of changes. Task assigning and updates are discussed in weekly team meetings (Monday 5:30pm).
 
 Regular group communication is done within our [Group 6 Discord server](https://discord.gg/v8tc53sZ) (Lindsay is already a member). <br>
 The server uses different dedicated channels to organised discussions. They go as follows:
-- **Important-dates** - 
+- **Important-dates** - Used to track due dates
+- **Important-links** - Collects all relevant links to external sites
+- **Project-updates** - Place to provide major updates to the project (outside of Slack messages)
+- **Meeting-times** - Posts regular meeting time and meeting history
+- **General** - Place for any and all main group discussions
 
-
+The [Slack channel](https://app.slack.com/client/T0C3E7EP2/G011K4DHGG6) is used to automatically track any changes made to the Trello board or GitHub repo.
 
 ---
 
 ## Testing and Automation
 All code changes are tested locally prior to staging.
-- **GitHub Actions** — Handles CI/CD for the staging site.
-- **PHP linting** — Enforced using `.phpcs.xml.dist`.
+- **GitHub Actions** - Handles CI/CD for the staging site.
+- **PHP linting** - Enforced using `.phpcs.xml.dist`.
