@@ -15,6 +15,7 @@ All content on the site is structured using **pages**.
 ---
 
 ## Styling content
+### Automatic Styling
 The Viridian theme automatically applies CSS styles to [WordPress core blocks](https://developer.wordpress.org/block-editor/reference-guides/core-blocks/#embed) using mappings defined in `functions.php`. <br>
 The mapping can be broken down into four main sections:
 - `get_default_classes_for_block`: Stores an array of 'default WordPress classes' for each core block element. This allows a later function to differentiate between default styles and custom CSS. 
@@ -167,12 +168,21 @@ As a simplification, the process goes as follows: the function retrieves the blo
 ```
 A simple function to handle WordPress rows and stacks, which do not have core block types. Instead, they are uniquely identified based on their individual classes `is-horizontal` and `is-vertical`. This then allows the Viridian custom style to be applied appropriately, automatically, and dynamically (if a row were to become a stack, and vice versa).
 
+### Additional Styling
+- Unmapped blocks can use manual CSS class names found in `style.css`.
+- Each group member has their own dedicated 'Custom CSS sections'
+- For unique styling, assign manual class names via the "Additional CSS Classes" field in the WordPress default editor.
+
 ---
 
 ## Navigation
-- To see any new pages created in the menu they must be added to Appearance/menus.
-- The menu to be selected to edit is "nav-menu(Primary)".
-- Select your new page from the left panel and then move into the required order and save.
+To update the site's main menu:
+
+1. Go to **Appearance > Menus**.
+2. Select `nav-menu (Primary)`.
+3. Check the box for any new page on the left and click "Add to Menu".
+4. Drag to reorder the items.
+5. Click "Save Menu".
 
 ## Back-ups and Migration
 - The plug-in 'All-In-On WP Migration and Back-up' is installed for setting up scheduled back-ups and organising migration to the production server as a manual process.
