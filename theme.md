@@ -49,32 +49,6 @@ The Viridian theme was crafted with deliberate design choices aimed at clarity, 
 
 ---
 
-## Example of Custom CSS Use
-To showcase how the theme dynamically handles custom CSS, and to prove why a feature that turns off the Viridian theme when custom CSS is detected is useful, see the below example.
-
-### Academic Partner – Page
-This page shows how custom CSS can be used alongside the theme with no conflicts between classes. Below is a sample of *some* of the custom classes used on this page.
-
-### Custom Classes
-
-| **Class Name**          | **Description**                                                                                          |
-|-------------------------|----------------------------------------------------------------------------------------------------------|
-| `.feature-description`  | Sets a max width and overflow for the drop-down description.                                             |
-| `.feature-heading`      | Increases font size, colour, and weight.                                                                 |
-| `.partnership-column`   | Sets an inner light green layer to a column (often contained within a group).                             |
-
----
-
-### Block with custom CSS vs Viridian Theme
-
-![Custom CSS Block](https://github.com/user-attachments/assets/fd4541f1-7928-441f-8198-c9e0fead144c)  
-![Viridian Theme Block](https://github.com/user-attachments/assets/8ae781ba-5d21-4d9f-b314-f44b8b152e6f)
-
-![Comparison Image 1](https://github.com/user-attachments/assets/8f689c9b-753c-4248-8ba9-b575f4ed5927)  
-![Comparison Image 2](https://github.com/user-attachments/assets/40da0980-7cf5-42a6-9aae-0342138754a1)
-
----
-
 ## Folder & File Highlights
 - `style.css`: Contains all base, theme, and member styles.
 >1. **Global Styles** — Base layout and presets.
@@ -246,3 +220,28 @@ A simple function to handle WordPress rows and stacks, which do not have core bl
 - Unmapped blocks can use manual CSS class names found in `style.css`.
 - Each group member has their own dedicated 'Custom CSS sections'
 - For unique styling, assign manual class names via the "Additional CSS Classes" field in the WordPress default editor.
+
+---
+
+## Dynamically Assigning Custom CSS and Viridian Theme
+To showcase how the theme dynamically handles custom CSS, and to prove why a feature that turns off the Viridian theme when custom CSS is detected is useful, see the below example.
+
+### Academic Partner – Page
+This page shows how custom CSS can be used alongside the theme with no conflicts between classes. Below is a sample of *some* of the custom classes used on this page.
+
+### Custom Classes
+
+| **Class Name**          | **Description**                                                                                          |
+|-------------------------|----------------------------------------------------------------------------------------------------------|
+| `.feature-description`  | Sets a max width and overflow for the drop-down description.                                             |
+| `.feature-heading`      | Increases font size, colour, and weight.                                                                 |
+| `.partnership-column`   | Sets an inner light green layer to a column.                                                             |
+
+---
+
+### Block with custom CSS vs Viridian Theme
+
+| **Custom CSS Block** | **Viridian Theme Block** |
+|:--------------------:|:--------------------------:|
+| ![Custom CSS block](https://github.com/user-attachments/assets/67a3cc4a-47ed-4dad-b8a9-ccbee9c8cd19) <br> | ![Viridian Theme Block](https://github.com/user-attachments/assets/8ae781ba-5d21-4d9f-b314-f44b8b152e6f) <br> |
+| ![Comparison Image 1](https://github.com/user-attachments/assets/8f689c9b-753c-4248-8ba9-b575f4ed5927) | ![Comparison Image 2](https://github.com/user-attachments/assets/40da0980-7cf5-42a6-9aae-0342138754a1) |
