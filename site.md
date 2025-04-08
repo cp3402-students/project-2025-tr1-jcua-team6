@@ -184,9 +184,38 @@ To update the site's main menu:
 4. Drag to reorder the items.
 5. Click "Save Menu".
 
-## Back-ups and Migration
-- The plug-in 'All-In-On WP Migration and Back-up' is installed for setting up scheduled back-ups and organising migration to the production server as a manual process.
-- If you require an automatic migration process this plug-in has a paid option for this functionality available.
+## Common Updates
+- Edit text or images on any page by navigating to Pages and selecting the page.
+- To embed a video, add an Embed block and paste the YouTube URL.
+- Use Group and Column blocks to structure layouts and automatically trigger Viridian styles.
+
+## Plugins
+The site uses the following plugins:
+
+- **All-In-One WP Migration:**
+For manual backup and small migration of the website. Without the premium version, the website is too large to sync to production, so its is a backup tool instead.
+  1. Install and activate the plugin.  
+  2. Go to its menu, choose "Export" to create a backup file.  
+  3. Download and store the backup (use as backup since syncing to production isn’t supported without premium).
+
+- **WPVivid Backup:**
+Main manual backup tool that exports a backup of the staging site and 'restores' it on the production.
+  1. Install and activate WPVivid Backup.  
+  2. Navigate to its dashboard menu on the staging site.  
+  3. Click "Backup" to export a backup file, then use the "Restore" option on production to import it.
+
+- **Theme Check:**
+Used to check the validity of the theme.
+  1. Install and activate Theme Check.  
+  2. Open the Theme Check interface via the admin menu.  
+  3. Select the active theme and run the test to review any issues.
+
+- **WPForms Lite:**
+Used on the registration page to create fill-in forms.
+  1. Install and activate WPForms Lite.  
+  2. Create a new form using a template in the WPForms interface.  
+  3. Customise the fields as needed and embed the form on the registration page.
 
 ## Settings
-- Permalink settings are set to 'Custom Structure' for development and testing. This can be changed to 'Post name' in the production site to meet best SEO standards and practices.
+- On staging, a `Custom Structure` may be used for testing.
+- Permalinks should be set to `Post name` in production (go to Settings -> Permalinks).
