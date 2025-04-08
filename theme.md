@@ -9,7 +9,7 @@ For full details on project structure, deployment, and site management, refer to
 ---
 
 ## Theme Overview
-Viridian is a fully custom WordPress theme based on a minimal starter framework. It focuses on a clean layout, accessibility, and a green colour palette to foster trust and approachability for a parent-focused educational website.
+Viridian is a fully customised WordPress theme built upon a minimal starter framework called [Underscores](https://underscores.me/). It focuses on a clean layout, accessibility, and a green colour palette to foster trust and approachability for a parent-focused educational website.
 
 ---
 
