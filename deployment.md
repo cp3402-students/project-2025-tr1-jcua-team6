@@ -86,7 +86,6 @@ We use Git and GitHub for collaborative version control and branching.
 Below is an improved explanation that clearly outlines what conflict markers are and how to resolve them when editing within GitHub’s interface:
 
 ### How to Resolve Merge Conflicts on GitHub
-
 When you encounter a merge conflict in GitHub, the affected file will display conflict markers that separate the differing versions. For example, you might see something like this:
 
 ```markdown
@@ -103,7 +102,6 @@ These markers indicate:
 - **`>>>>>>> feature-branch`**: The end of the incoming changes from the specified branch.
 
 ### Steps to Resolve the Conflict
-
 1. **Review the Changes**  
    Look at both versions of the code to understand what changes have been made. Decide if you want to keep one version or if you need to merge parts of both.
 
@@ -131,12 +129,7 @@ The workflow script watches changes to the theme directory (e.g. `startertheme/*
 
 ---
 
-Below is a slightly more concise version focusing on the step-by-step process:
-
----
-
 ## Staging to Production Sync Using WPvivid Backup
-
 Since we didn’t have a GitHub action in place, we used the **WPvivid Backup** plugin to sync changes from our staging site to production. Follow these steps:
 
 1. **Install & Activate WPvivid Backup**  
@@ -180,6 +173,15 @@ The [Slack channel](https://app.slack.com/client/T0C3E7EP2/G011K4DHGG6) is used 
 ---
 
 ## Testing and Automation
-All code changes are tested locally prior to staging.
-- **GitHub Actions** - Handles CI/CD for the staging site.
-- **PHP linting** - Enforced using `.phpcs.xml.dist`.
+**Local Testing:**  
+- After installing WordPress locally, activate the custom `Viridian` theme and import the [Theme Unit Test data](https://codex.wordpress.org/Theme_Unit_Test) to verify compatibility.
+  
+**CI/CD:**  
+- We use **GitHub Actions** for staging deployment workflow that checks for deployment errors and conflicts before automatic merging/syncing <br>
+- We enforce PHP linting via `.phpcs.xml.dist`.
+
+**Theme Validation:**  
+- Run the [Theme Check plugin](https://wordpress.org/plugins/theme-check/) to ensure compliance with WordPress standards. <br>
+- The plugin will list errors and recommendations to fix. You will see a menu like:
+![image](https://github.com/user-attachments/assets/b536a484-4ebd-4050-a580-1c0af791bdcf)
+
