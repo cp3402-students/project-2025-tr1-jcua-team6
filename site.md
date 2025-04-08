@@ -1,6 +1,18 @@
-# Baizonn Learning Center
+# Site Management Guide
 
-**The Baizonn Learning Center website uses the Viridian theme.**  
+The **Baizonn Learning Center** website uses the custom **Viridian** WordPress theme. This guide outlines how to update content, manage styling, use navigation, and perform essential site maintenance.
+
+---
+
+## Pages vs Posts
+
+All content on the site is structured using **pages**.
+
+- Use **Pages** (not Posts) to create and manage content for the site.
+- Navigate to the WordPress dashboard -> Pages to edit existing content or create a new page.
+- When creating a new page, you can choose between the "Default template" and "Full-Width page" under Quick Edit -> Template.
+
+---
 
 ## Adding new content
 - All the content of the theme is contained in individual pages.
