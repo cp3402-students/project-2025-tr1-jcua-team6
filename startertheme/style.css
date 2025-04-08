@@ -54,9 +54,9 @@
 
 /* Global Box Sizing and Normalize */
 html {
-	line-height: 1.15;             /* Correct line height across browsers */
+	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
-	box-sizing: border-box;        /* Set global box-sizing */
+	box-sizing: border-box;
 }
 
 *, *::before, *::after {
@@ -64,9 +64,9 @@ html {
 }
 
 body {
-	margin: 10px;                    /* Reset default margin */
-	background: white;             /* Base background */
-	color: black;                  /* Base text color */
+	margin: 10px;
+	background: white;
+	color: black;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -252,7 +252,7 @@ img.custom-logo {
 }
 
 .main-navigation ul {
-	display: none;             /* Hidden by default; revealed in media queries */
+	display: none; /* Hidden by default; revealed in media queries */
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
@@ -263,7 +263,7 @@ img.custom-logo {
 	float: left;
 	position: absolute;
 	top: 100%;
-	left: -999em;             /* Hidden off-screen */
+	left: -999em; /* Hidden off-screen */
 	z-index: 99999;
 }
 
@@ -513,7 +513,7 @@ img.custom-logo {
 
 /* Alignment utilities */
 .alignleft {
-	float: left;             /* Keep floats intact for LTR languages */
+	float: left;
 	margin-right: 1.5em;
 	margin-bottom: 1.5em;
 }
@@ -733,13 +733,12 @@ This allows the viridian theme to center both elements with spacing automaticall
     max-width: 60%;
 }
 
-/* Feature bubble styling */
 .feature-bubble {
 	background-color: #9ad99e;
 	align-content: center;
 	padding: 2rem;
 	margin-bottom: 2rem;
-	box-shadow: inset 1px -7px 20px 5px rgba(0, 0, 0, 0.1); /* Inset shadow effect */
+	box-shadow: inset 1px -7px 20px 5px rgba(0, 0, 0, 0.1);
 }
 
 .feature-heading {
@@ -750,21 +749,21 @@ This allows the viridian theme to center both elements with spacing automaticall
 }
 
 .feature-row {
-	display: flex;                  /* Flex layout for side-by-side items */
-	align-items: center;            /* Vertically center items */
-	justify-content: space-between; /* Distribute space between columns */
-	flex-wrap: wrap;                /* Wrap columns on smaller screens */
+	display: flex;           
+	align-items: center;       
+	justify-content: space-between;
+	flex-wrap: wrap;
 	gap: 1rem;
 }
 
 .feature-text {
-	flex: 1 1 auto;                 /* Allow text to expand or shrink */
+	flex: 1 1 auto;
 	margin-right: 1rem;
 }
 
 .feature-image img {
-	max-width: 100%;                /* Responsive image sizing */
-	border-radius: 10px;            /* Rounded corners */
+	max-width: 100%;
+	border-radius: 10px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -775,6 +774,7 @@ This allows the viridian theme to center both elements with spacing automaticall
 	border-radius: 15px;
 	padding: 1rem;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	max-width: 350px;
 }
 
 .feature-testimony {
