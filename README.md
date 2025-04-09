@@ -64,3 +64,8 @@ Samuel Barrett | [LinkedIn Profile](https://www.linkedin.com/in/sam-barrett-3885
 >   margin: 0 auto;
 > }
 > ```
+
+# Viridian Showcase (by Casey)
+Note: This is NOT the group presentation, simply an additional showcase video that displays how the `Viridian` theme was successfully imported onto a fresh WordPress site. It also shows the design features of the theme, and how they can be used without conflicting with custom CSS.
+
+[![Watch the video](https://img.youtube.com/vi/Wax6U_wEa3I/0.jpg)](https://youtu.be/Wax6U_wEa3I)
