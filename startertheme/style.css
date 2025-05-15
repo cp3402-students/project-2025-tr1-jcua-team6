@@ -3,11 +3,10 @@
    - Casey Summers
    - Alex Johnstone
    - Samuel Barret
-   - Lance Howell
 
     Theme Name: Viridian
 	Theme URI: https://github.com/cp3402-students/project-2025-tr1-jcua-team6
-	Author: Casey Summers, Samuel Barret, Lance Howell, Alex Johnstone
+	Author: Casey Summers, Samuel Barret, Alex Johnstone
 	Author URI: https://github.com/Casey-Summers
 	Description: A custom theme for WordPress that takes inspiration from the Viridian colour palette and design principles. The theme is designed to be clean, simple, and easy. 
 	It has a focus on readability and accessibility. The theme is built using HTML, CSS, and PHP to automatically apply when using the default WordPress editor.
@@ -31,7 +30,7 @@
 	   2. Viridian theme styles ("VIRIDIAN THEME STYLES") (Casey)
 	   3. Group Member / Custom Styles (Casey's Section)
 	   4. Group Member / Custom Styles (Sam's Section)
-	   5. Group Member / Custom Styles (Lance's Section)
+	   5. Group Member / Custom Styles (Section)
 	   6. Group Member / Custom Styles (Alex's Section) 
 
    Version details (superficial):
@@ -910,9 +909,7 @@ This allows the viridian theme to center both elements with spacing automaticall
 	padding: 1em;
 }
 
-/* ============================================
-   Group Member / Custom Styles (Lance's Section)
-   ============================================ */
+
 
 /* Course section box layout */
 .viridian-course-section {
