@@ -1,7 +1,7 @@
 # README
 
 ## Viridian — Custom WordPress Theme
-Developed by Casey Summers, Samuel Barrett, Lance Howell, and Alex Johnstone as members of JCU Group 6 for the subject CP3402
+Developed by Casey Summers, Samuel Barrett, and Alex Johnstone as members of JCU Group 6 for the subject CP3402
 
 ## Overview
 This repository contains the custom WordPress theme **Viridian**, developed from the [Underscores](https://underscores.me/) starter theme as part of the CP3402 project to create a simple website for the company [Baizonn](https://baizonnlearningctr.com/) using some provided raw content. The theme focuses on several shades and hues of gentle greens to showcase a clean and modern aesthetic tailored to an inviting learning environment. The clarity, structure, and content of the theme target parents of students:
@@ -17,7 +17,6 @@ For more information on how the theme works, please visit the [Theme Developer G
 
 ## Members (A-Z):
 Alex Johnstone | [LinkedIn Profile](https://www.linkedin.com/in/alexander-johnstone-b93793117/) | [GitHub Profile](https://github.com/alexjohnstone29) <br>
-Lance Howell  | [LinkedIn Profile](https://www.linkedin.com/in/lance-1-b0520334a/) | [GitHub Profile](https://github.com/Lance791854) <br>
 Casey Summers | [LinkedIn Profile](https://www.linkedin.com/in/casey-summers-b2ba3a30a/) | [GitHub Profile](https://github.com/Casey-Summers) <br>
 Samuel Barrett | [LinkedIn Profile](https://www.linkedin.com/in/sam-barrett-388526356/) | [GitHub Profile](https://github.com/SamBarrett1) <br>
 
